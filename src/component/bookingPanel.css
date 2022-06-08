@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.tabs{
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 25px;
+    width: 80%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+ul{
+    display: flex;
+    }
+li{
+    list-style: none;
+    padding: 15px 25px;
+    color: gray; 
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.booking-icon{
+    margin-right: 5px;
+}
+.active{
+    border-bottom: 5px solid #2379B7;
+    color: #2379B7;
+
+}
+.sub-tab{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+.passenger{
+    margin-right: 50px;
+    padding: 15px 5px ;
+    position: relative;
+}
+.passenger-icon{
+    margin-left: 5px;
+}
+.drop-down-butten{
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    color: gray; 
+    cursor: pointer;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+.drop-down-content{
+    position: absolute;
+    top: -240px;
+    left: -150px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* border: 2px solid red; */
+    z-index: 8;
+    background-color: white;
+    border-radius: 13px;
+    padding: 9px 15px;
+}
+.drop-down-content hr{
+    margin-bottom: 3px;
+}
+.drop-down-item{
+    display: flex;
+    width: 330px;
+    justify-content: space-between;
+    /* transition: all 6s; */
+}
+.drop-down-item-type{
+    margin-bottom: 0px;
+    font-size: 17px;
+    margin-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+.drop-down-item-detail{
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+.drop-down-itel-right{
+    display: flex;
+    padding: 3px 15px;
+}
+.decrement, .increment, .count{
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(242, 242, 242, 0.899);
+    box-shadow: rgba(156, 156, 156, 0.24) 0px 2px 8px 0px;
+    user-select: none;
+}
+.plus-icon, .minus-icon, .count-num{
+    font-size: 13px;
+    text-align: center;
+    color: gray;
+    margin: auto;
+    user-select: none;
+}
+
+

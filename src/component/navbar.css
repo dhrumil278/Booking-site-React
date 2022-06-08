@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    /* color: white; */
+}
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    align-items: center;
+    padding: 9px 25px;
+    background-color: #ffffff;
+}
+.logo-section{
+    display: flex;
+    margin: 5px 15px;
+    align-items: center;
+    /* border: 1px solid red;  */
+}
+.logo-img{
+    width: 40px;
+    height: 40px
+}
+.company-name{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Encode Sans', sans-serif;
+    margin-left: 15px; 
+    letter-spacing: 1.5px; 
+    margin-bottom: 0px;
+}
+.right-logo-section{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;  
+}
+.locatioon{
+    display: flex;
+    margin: 0px 15px;
+    /* border: 1px solid yellow; */
+    align-items: center;
+}
+.l-name{
+   font-size: 13px;
+   font-family: 'Open Sans', sans-serif;
+   margin: 0px 7px;
+   font-weight: 800;
+   letter-spacing: 1px;
+}
+.ind-flag{
+    background: url('../Static/Images/ind-flag.jpg') no-repeat center center/cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+.notification{
+    /* border: 2px solid black; */
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+.vertical-line{
+    border-left: 1px solid black;
+    height: 25px;
+    margin: 1px 0px;
+    margin-right: 25px;
+
+}
+.login{
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+}
+.btn-login{
+    border: none;
+    /* background-color: white; */
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    user-select: none;
+}
+.profile-drop-down-content{
+    position: absolute;
+    background-color: white;
+    border-radius: 7px;
+    width: 250px;
+    top: 70px;
+    right: 15px;  
+    /* padding: 7px 15px; */
+}   
+.profile-drop-down-content hr{
+    margin:0px;
+}
+.profile-drop-down-item-p{
+    margin-left: 15px;
+    font-size: 15px;
+}
+.profile-drop-down-items{
+    display: flex;
+    padding: 8px 25px;
+}
+.profile-drop-down-items:hover{
+    background-color: rgba(231, 229, 229, 0.81);
+}
+.profile-drop-down-items p{
+    margin-bottom: 0px;
+}
