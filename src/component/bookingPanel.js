@@ -37,7 +37,7 @@ function BookingPanel() {
                         </ul>
                         <div className="passenger">
                             <div className="drop-down-butten" onClick={(e) => setIsActive(!isActive)}>
-                                People 
+                                People({ adult + child + infants })
                                 { isActive ? <FontAwesomeIcon className="passenger-icon" icon={solid('angle-down')} /> : <FontAwesomeIcon className="passenger-icon" icon={solid('angle-up')} /> }
                             </div>
                             {isActive && (
@@ -48,7 +48,7 @@ function BookingPanel() {
                                             <p className="drop-down-item-detail">ages 13 or above</p>
                                         </div>
                                         <div className="drop-down-itel-right">
-                                            <div className="decrement" onClick={ () => setAdult( adult - 1) }><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
+                                            <div className="decrement" onClick={ () => setAdult( adult == 0 ? adult=0 : adult - 1 ) }><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
                                             <div className="count">
                                                 <span className="count-num">{ adult }</span>
                                             </div>
@@ -62,7 +62,7 @@ function BookingPanel() {
                                             <p className="drop-down-item-detail">ages between 2-12</p>
                                         </div>
                                         <div className="drop-down-itel-right">
-                                            <div className="decrement" onClick={ () => setChild( child - 1) }><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
+                                            <div className="decrement" onClick={ () => setChild( child == 0 ? child=0 : child - 1 ) }><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
                                             <div className="count">
                                                 <span className="count-num">{ child }</span>
                                             </div>
@@ -76,7 +76,7 @@ function BookingPanel() {
                                             <p className="drop-down-item-detail">less than 2 year</p>
                                         </div>
                                         <div className="drop-down-itel-right">
-                                            <div className="decrement" onClick={ () => setInfants( infants - 1) }><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
+                                            <div className="decrement" disabled = "true" onClick={ () => setInfants( infants == 0 ? infants=0 : infants - 1 ) }><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
                                             <div className="count">
                                             <span className="count-num">{ infants }</span>
                                             </div>

@@ -1,5 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     
+}
+.path{
+    padding-top: 15px;
+    padding-left: 50px;
+}
+.path p{
+    margin-bottom: 0px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #7c797b;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.mainHotelListPage{
+    background-color: #e1e1e12a;
+}
+.formFild{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px 1px;
+    border-radius: 13px;
+    background-color: white;
+    box-shadow: rgba(156, 156, 156, 0.24) 0px 2px 8px 0px;
+}
+.mainForm{
+    display: grid;
+    width: 100%;
+    padding: 5px 25px;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 25px;
+}
+.formItems{
+    background-color: rgba(220, 218, 218, 0.751);
+    display: flex;
+    flex-direction: column;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+.formItems input{
+    border: none;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    color: #7c797b;
+    font-size: 13px;
+    padding: 5px 0px;
+
+}
+.formItems label{
+    color: black;
+    font-size: 17px;
+    padding: 1px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+::placeholder{
+    font-size: 13px;
+    color: #7c797b;
+}
+.submit{
+    background-color: #2379B7;
+    color: white;
+}
+.submit-btn{
+    color: white;
+    border: none;
+    margin-top: 15px;
+    background-color: transparent;
 }
