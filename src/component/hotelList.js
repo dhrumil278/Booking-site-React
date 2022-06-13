@@ -4,14 +4,39 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import Navbar from './navbar';
 import './hotelList.css'
 import './bookingPanel.css';
+import HotelScroll from "./hotelScrol";
 
 
 function HotelList() {
 
-    const [isActive, setIsActive] = useState(false);
-    const [adult, setAdult] = useState(0);
-    const [child, setChild] = useState(0);
-    const [infants, setInfants] = useState(0);
+    const [checked, setChacked] = useState(false);
+
+    const handleChange = () =>{
+        setChacked(checked);
+    }
+
+    const chechBoxItem = [
+    {
+        label:"Hotels",
+        value: {checked},
+        onClick: {handleChange},
+    },
+    {
+        label:"Breakfast and Dinner",
+        value: {checked},
+        onClick: {handleChange},
+    },
+    {
+        label:"free Cancellation",
+        value: {checked},
+        onClick: {handleChange},
+    },
+    {
+        label:"no prepayment",
+        value: {checked},
+        onClick: {handleChange},
+    },
+    ];
 
     return (
         <>
@@ -38,57 +63,31 @@ function HotelList() {
                             <button className='submit-btn'>Submit</button>
                         </div>
                     </div>
-                    <div className="passenger">
-                        <div className="drop-down-butten" onClick={(e) => setIsActive(!isActive)} >
-                            People
-                            ({adult + child + infants})
-                            {isActive ? <FontAwesomeIcon className="passenger-icon" icon={solid('angle-down')} /> : <FontAwesomeIcon className="passenger-icon" icon={solid('angle-up')} />}
+                </div>
+                <div className="main-below-content">
+                    <div className="below-left-part">
+                        <div className="search-property">
+                            <p className="search-title">Search location and Property</p>
+                            <form action="">
+                                <input type="text" placeholder="search propert" />
+                            </form>
                         </div>
-                        {isActive && (
-                            <div className="drop-down-content">
-                                <div className="drop-down-item">
-                                    <div className="drop-down-item-left">
-                                        <p className="drop-down-item-type">Adult</p>
-                                        <p className="drop-down-item-detail">ages 13 or above</p>
-                                    </div>
-                                    <div className="drop-down-itel-right">
-                                        <div className="decrement" onClick={() => setAdult(adult == 0 ? adult = 0 : adult - 1)}><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
-                                        <div className="count">
-                                            <span className="count-num">{adult}</span>
-                                        </div>
-                                        <div className="increment" onClick={() => setAdult(adult + 1)}><FontAwesomeIcon className="plus-icon" icon={solid('plus')} /></div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div className="drop-down-item">
-                                    <div className="drop-down-item-left">
-                                        <p className="drop-down-item-type">Child</p>
-                                        <p className="drop-down-item-detail">ages between 2-12</p>
-                                    </div>
-                                    <div className="drop-down-itel-right">
-                                        <div className="decrement" onClick={() => setChild(child == 0 ? child = 0 : child - 1)}><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
-                                        <div className="count">
-                                            <span className="count-num">{child}</span>
-                                        </div>
-                                        <div className="increment" onClick={() => setChild(child + 1)} ><FontAwesomeIcon className="plus-icon" icon={solid('plus')} /></div>
-                                    </div>
-                                </div>
-                                <hr />
-                                <div className="drop-down-item">
-                                    <div className="drop-down-item-left">
-                                        <p className="drop-down-item-type">Infants</p>
-                                        <p className="drop-down-item-detail">less than 2 year</p>
-                                    </div>
-                                    <div className="drop-down-itel-right">
-                                        <div className="decrement" disabled="true" onClick={() => setInfants(infants == 0 ? infants = 0 : infants - 1)}><FontAwesomeIcon className="minus-icon" icon={solid('minus')} /></div>
-                                        <div className="count">
-                                            <span className="count-num">{infants}</span>
-                                        </div>
-                                        <div className="increment" onClick={() => setInfants(infants + 1)}><FontAwesomeIcon className="plus-icon" icon={solid('plus')} /></div>
-                                    </div>
-                                </div>
+                        <div className="popular-filters">
+                            <p className="filter-title">Popular Filters</p>
+                            <div className="filter-chech-box">
+                                {
+                                    chechBoxItem.map((check)=>(
+                                        <label>
+                                            <input type="checkbox" checked={check.value} onClick={check.onClick} />
+                                            {check.label}
+                                        </label>
+                                    ))
+                                }
                             </div>
-                        )}
+                        </div>
+                    </div>
+                    <div className="below-right-part">
+                        <HotelScroll />
                     </div>
                 </div>
             </div>
