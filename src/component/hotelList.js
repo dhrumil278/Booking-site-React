@@ -5,6 +5,7 @@ import Navbar from './navbar';
 import './hotelList.css'
 import './bookingPanel.css';
 import HotelScroll from "./hotelScrol";
+import Form from './Form';
 
 
 function HotelList() {
@@ -46,23 +47,7 @@ function HotelList() {
                     <p>Home &gt; Hotel list</p>
                 </div>
                 <div className="formFild">
-                    <div className="mainForm">
-                        <div className="formItems">
-                            <label htmlFor="">Location</label>
-                            <input type="text" placeholder='Gujarat' />
-                        </div>
-                        <div className="formItems">
-                            <label htmlFor="">Chack in</label>
-                            <input type="text" placeholder='27 July' />
-                        </div>
-                        <div className="formItems">
-                            <label htmlFor="">Check out</label>
-                            <input type="text" placeholder='29 July' />
-                        </div>
-                        <div className="formItems submit">
-                            <button className='submit-btn'>Submit</button>
-                        </div>
-                    </div>
+                    <Form />
                 </div>
                 <div className="main-below-content">
                     <div className="below-left-part">
@@ -78,7 +63,7 @@ function HotelList() {
                                 {
                                     chechBoxItem.map((check)=>(
                                         <label>
-                                            <input type="checkbox" checked={check.value} onClick={check.onClick} />
+                                            <input type="checkbox" checked={check.checked} onClick={check.onClick} />
                                             {check.label}
                                         </label>
                                     ))
@@ -87,6 +72,11 @@ function HotelList() {
                         </div>
                     </div>
                     <div className="below-right-part">
+                        <HotelScroll />
+                        <HotelScroll />
+                        <HotelScroll />
+                        <HotelScroll />
+                        <HotelScroll />
                         <HotelScroll />
                     </div>
                 </div>

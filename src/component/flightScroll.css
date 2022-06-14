@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.mainFlightScroll{
+    background-color: white;
+    box-shadow: rgba(156, 156, 156, 0.24) 0px 2px 8px 0px;
+    margin: 20px 15px;
+    padding: 15px 0px;
+    border-radius: 15px;
+}
+.flightTitle{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0px 80px;
+}
+.From, .To, .flightDuretion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.duretion{
+    font-size: 10px;
+}
+.mainTravelDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 100px;
+    align-items: center;
+}
+.cityName{
+    font-size: 18px;
+    font-weight: 400;
+}
+.bookNowFlight{
+    background-color: #2379B7;
+    color: white;
+    display: flex;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: rgba(156, 156, 156, 0.24) 0px 2px 8px 0px;
+    cursor: pointer;
+    align-items: center;
+    vertical-align: middle;
+}

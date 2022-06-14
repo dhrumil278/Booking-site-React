@@ -76,16 +76,15 @@
 .main-below-content{
     margin-top: 30px;
     padding: 5px 25px;
-    border: 1px solid red;
     display: flex;
 }
 .below-left-part{
     flex-basis: 20%;
-    border: 1px solid yellow;
 }
 .below-right-part{
     flex-basis: 80%;
-    border: 1px solid green;
+    Overflow-y:scroll;
+    height: 400px;
 }
 .search-title{
     margin-bottom: 10px;
@@ -98,13 +97,9 @@
     margin-bottom: 10px;
     padding: 13px 20px;
     border: none;
-    /* border: 0.1px solid black; */
     border-radius: 5px;
     outline: none;
     box-shadow: rgba(156, 156, 156, 0.24) 0px 2px 8px 0px;
-}
-.search-property > form > ::placeholder{
-    /* color: black; */
 }
 .filter-chech-box{
     display: flex;
@@ -115,6 +110,7 @@
 }
 .filter-chech-box > label > input{
     margin-right: 5px;
+    accent-color: #2379B7;
 }
 .popular-filters > p{
     font-size: 18px;
