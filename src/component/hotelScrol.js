@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import './hotelScroll.css';
+import './CSS/hotelScroll.css';
 import Background from '../Static/Images/download.jpg';
 
 

@@ -1,7 +1,7 @@
 import Logo from '../Static/Images/travel-logo.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import './navbar.css';
+import './CSS/navbar.css';
 import { useState } from 'react';
 
 function Navbar() {

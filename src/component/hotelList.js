@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Navbar from './navbar';
-import './hotelList.css'
-import './bookingPanel.css';
+import './CSS/hotelList.css'
+import './CSS/bookingPanel.css';
 import HotelScroll from "./hotelScrol";
 import Form from './Form';
 
@@ -11,6 +12,9 @@ import Form from './Form';
 function HotelList() {
 
     const [checked, setChacked] = useState(false);
+    const location = useLocation();
+    console.log(location.state.place);
+
 
     const handleChange = () =>{
         setChacked(checked);
@@ -47,7 +51,11 @@ function HotelList() {
                     <p>Home &gt; Hotel list</p>
                 </div>
                 <div className="formFild">
-                    <Form />
+                    <Form 
+                        location = {location.state.place}
+                        checkIn = {location.state.checkIn}
+                        checkOut = {location.state.checkOut}
+                    />
                 </div>
                 <div className="main-below-content">
                     <div className="below-left-part">

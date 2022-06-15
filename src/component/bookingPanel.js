@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CarBooking from "./carBooking";
 import FlightBooking from "./flightBooking";
 import HotelBooking from "./hotelBooking";
-import './bookingPanel.css';
+import './CSS/bookingPanel.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 

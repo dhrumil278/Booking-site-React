@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import './flightScroll.css';
+import './CSS/flightScroll.css';
 
 function FlightScroll() {
 

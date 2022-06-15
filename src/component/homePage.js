@@ -3,7 +3,7 @@ import { Carousel, } from 'react-bootstrap';
 import Image1 from '../Static/Images/home-2.jpg';
 import Image2 from '../Static/Images/flight-1.jpg';
 import Image3 from '../Static/Images/car-1.jpg';
-import './homePage.css'
+import './CSS/homePage.css';
 
 function HomePage() {
     const [index, setIndex] = useState(0);

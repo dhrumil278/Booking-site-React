@@ -50,7 +50,7 @@
    letter-spacing: 1px;
 }
 .ind-flag{
-    background: url('../Static/Images/ind-flag.jpg') no-repeat center center/cover;
+    background: url('../../Static/Images/ind-flag.jpg') no-repeat center center/cover;
     width: 20px;
     height: 20px;
     border-radius: 50%;
