@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './CSS/hotelScroll.css';
-import Background from '../Static/Images/download.jpg';
+import Background from '../Static/Images/taj.jpg';
+// import Background from 'https://c1.wallpaperflare.com/preview/549/480/26/taj-mahal-palace-hotel-5-star-hotel-mumbai.jpg';
 
 
 function HotelScroll(){

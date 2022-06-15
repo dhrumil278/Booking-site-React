@@ -3,16 +3,16 @@ function Form(props) {
         <>
             <div className="mainForm">
                 <div className="formItems">
-                    <label htmlFor="">Location</label>
-                    <input type="text" placeholder='Gujarat' value={props.location} />
+                    <label htmlFor="">{props.label1}</label>
+                    <input type="text" placeholder='' value={props.input1} />
                 </div>
                 <div className="formItems">
-                    <label htmlFor="">Chack in</label>
-                    <input type="text" placeholder='27 July' value={props.checkIn}/>
+                    <label htmlFor="">{props.label2}</label>
+                    <input type="text" placeholder='' value={props.input2}/>
                 </div>
                 <div className="formItems">
-                    <label htmlFor="">Check out</label>
-                    <input type="text" placeholder='29 July' value={props.checkOut}/>
+                    <label htmlFor="">{props.label3}</label>
+                    <input type="text" placeholder='' value={props.input3}/>
                 </div>
                 <div className="formItems submit">
                     <button className='submit-btn'>Submit</button>

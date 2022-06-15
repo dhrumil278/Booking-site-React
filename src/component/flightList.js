@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useLocation } from 'react-router-dom';
 import Navbar from "./navbar";
 import Form from './Form';
 import HotelScroll from "./hotelScrol";
@@ -8,6 +9,8 @@ import FlightScroll from './flightScroll';
 function FlightList() {
 
     const [checked, setChacked] = useState(false);
+    const location = useLocation();
+    console.log(location.state.checkIn);
 
     const handleChange = () =>{
         setChacked(checked);
@@ -64,7 +67,14 @@ function FlightList() {
                     <p>Home &gt; Flight List</p>
                 </div>
                 <div className="formFild">
-                    <Form />
+                    <Form
+                        label1='From'
+                        label2='To'
+                        label3='Check In'
+                        input1 = {location.state.from}
+                        input2 = {location.state.to}
+                        input3 = {location.state.checkIn}
+                    />
                 </div>
                 <div className="main-below-content">
                     <div className="below-left-part">

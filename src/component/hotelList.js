@@ -52,9 +52,12 @@ function HotelList() {
                 </div>
                 <div className="formFild">
                     <Form 
-                        location = {location.state.place}
-                        checkIn = {location.state.checkIn}
-                        checkOut = {location.state.checkOut}
+                        label1='Location'
+                        label2='Check In'
+                        label3='check Out'
+                        input1 = {location.state.place}
+                        input2 = {location.state.checkIn}
+                        input3 = {location.state.checkOut}
                     />
                 </div>
                 <div className="main-below-content">
