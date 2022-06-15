@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './CSS/hotelScroll.css';
@@ -7,13 +8,18 @@ import Background from '../Static/Images/taj.jpg';
 
 function HotelScroll(){
 
+    const navigate = useNavigate();
+
     const hotelImageStyle = {
         background : `url(${Background}) no-repeat center center/cover `,
         flexBasis: "40%",
         height: "400px",
     }
 
-    return(
+    const handleSubmit = ()=>{
+        navigate('/payment');
+    }
+        return(
         <>
             <div className="maiHotelScroll">
                 <div className="hotelImagDiv"
@@ -40,7 +46,7 @@ function HotelScroll(){
                         </div>
                         <div className="price">
                             <div className="amount"><FontAwesomeIcon className="rupee-icon" icon={solid('indian-rupee-sign')} />24000</div>
-                            <div className="bookNow">Book Now</div>
+                            <div className="bookNow" onClick={handleSubmit}>Book Now</div>
                         </div>
                     </div>
                 </div>

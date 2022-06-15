@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Navbar from './navbar';
 import './CSS/hotelList.css'
 import './CSS/carList.css'
@@ -82,11 +80,6 @@ function CarList() {
                         </div>
                     </div>
                     <div className="below-right-part">
-                        <CarScroll />
-                        <CarScroll />
-                        <CarScroll />
-                        <CarScroll />
-                        <CarScroll />
                         <CarScroll />
                     </div>
                 </div>
