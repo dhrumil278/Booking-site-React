@@ -1,3 +1,7 @@
+import React from 'react';
+import { useNavigate } from 'react-router';  
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './CSS/payment.css';
 import Mastercard from '../Static/Images/mastercad.jpg';
 import Paypal from '../Static/Images/paypal.png';
@@ -11,6 +15,8 @@ import Navbar from './navbar';
 
 function Payment() {
 
+    const navigate = useNavigate();
+    
     const mastercardStyle = {
         background : `url(${Mastercard}) no-repeat center center/cover `,
         height: "50px",
@@ -34,9 +40,16 @@ function Payment() {
     const tajStyle = {
         background : `url(${Taj}) no-repeat center center/cover `,
         height: "270px",
-        width:'50%',
-        margin: 'auto'
+        width:'70%',
+        margin: 'auto',
+        borderRadius: '13px',
+        boxShadow : 'rgba(0, 0, 0, 0.16) 0px 1px 4px;',
     }
+
+    const handleConfirm=()=>{
+        navigate('/thankyou');
+    };
+
     return (
         <>
             <Navbar />
@@ -71,7 +84,10 @@ function Payment() {
                     </div>
                     <div className="payment-leftPart">
                         <div className="bookingDiv">
-                            <div className="bookingName">Hotel Taj</div>
+                            <div className="bookingLocationDiv">
+                                <div className="bookingName">Hotel Taj</div>
+                                <p className="bookingLocation"><FontAwesomeIcon className="flag-icon" icon={solid('flag')} /> Mumbai, Gate way of India</p>
+                            </div>
                             <div className="bookingImgDiv" style={tajStyle}></div>
                             <div className="bookingDetails">
                                 <div className="bookingItems">
@@ -82,6 +98,9 @@ function Payment() {
                                     <p className="bookingLabel">Check Out</p>
                                     <p className="bookingInput">16 June</p>
                                 </div>
+                            </div>
+                            <div className="confirm" onClick={handleConfirm}>
+                                Confirm Booking
                             </div>
                         </div>
                     </div>
