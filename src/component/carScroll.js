@@ -9,7 +9,7 @@ import './CSS/hotelScroll.css';
 import {  useNavigate } from "react-router-dom";
 
 
-function CarScroll() {
+function CarScroll(props) {
 
     const navigate = useNavigate();
 
@@ -68,6 +68,9 @@ function CarScroll() {
             state:{
                 car:cars,
                 value:index,
+                adult:props.a,
+                child:props.c,
+                infants:props.i,
             }
         })
     }

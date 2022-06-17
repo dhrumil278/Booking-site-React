@@ -48,13 +48,14 @@ function CarList() {
                     <p>Home &gt; Car List</p>
                 </div>
                 <div className="formFild">
+                    <div className="passanger">People [A({location.state.adult}),C({location.state.child}),I({location.state.infants})]</div>
                     <Form 
                         label1='Location'
                         label2='Check In'
                         label3='check Out'
                         input1 = {location.state.place}
                         input2 = {location.state.checkIn}
-                        input3 = {location.state.checkOut}
+                        input3 = {location.state.checkOut}  
                     />
                 </div>
                 <div className="main-below-content">
@@ -80,7 +81,11 @@ function CarList() {
                         </div>
                     </div>
                     <div className="below-right-part">
-                        <CarScroll />
+                        <CarScroll 
+                            a={location.state.adult}
+                            c={location.state.child}
+                            i={location.state.infants}
+                        />
                     </div>
                 </div>
             </div>

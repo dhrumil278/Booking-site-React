@@ -7,7 +7,7 @@ const initialCarData = {
     checkIn: '',
     checkOut: '',
 }
-function CarBooking(){
+function CarBooking(props){
 
     const [carData, setCarData] = useState(initialCarData);
     const navigate = useNavigate();
@@ -24,6 +24,9 @@ function CarBooking(){
                 place: carData.location,
                 checkIn: carData.checkIn,
                 checkOut: carData.checkOut,
+                adult:props.a,
+                child:props.c,
+                infants:props.i,
             }
         });
     }

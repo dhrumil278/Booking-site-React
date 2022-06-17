@@ -7,7 +7,7 @@ const initialFlightData = {
     checkIn: '',
 }
 
-function FlightBooking(){
+function FlightBooking(props){
 
     const [flightData, setFlightData] = useState(initialFlightData);
     const navigate = useNavigate();
@@ -24,6 +24,9 @@ function FlightBooking(){
                 from: flightData.from,
                 to: flightData.to,
                 checkIn: flightData.checkIn,
+                adult: props.a,
+                child: props.c,
+                infats: props.i,
             }
         });
     }

@@ -88,7 +88,7 @@ function Payment() {
                             <div className="infoForm">
                                 <div className="infoItems">
                                     <p className="infoLabel">Travellers</p>
-                                    <p className="infoInput">{/*location.state.adult + location.state.child + location.state.infants*/} People</p>
+                                    <p className="infoInput">{location.state.adult + location.state.child + location.state.infants} People</p>
                                 </div>
                             </div>
                         </div>
@@ -107,6 +107,9 @@ function Payment() {
                         <div className="bookingDiv">
                             <div className="bookingLocationDiv">
                                 <div className="bookingName">
+                                    {
+                                        console.log(location.state.flight[hindex].company)                                        
+                                    }
                                     {
                                         location.state.hotel[hindex].hname ?
                                             location.state.hotel[hindex].hname :

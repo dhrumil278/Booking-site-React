@@ -3,9 +3,9 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import './CSS/flightScroll.css';
 import { useNavigate } from "react-router-dom";
 
-function FlightScroll() {
+function FlightScroll(props) {
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(props);
 
     const flights = [
         {
@@ -55,6 +55,9 @@ function FlightScroll() {
             state:{
                 flight:flights,
                 value:index,
+                adult:props.a,
+                child:props.c,
+                infants:props.i,
             }
         })
     }

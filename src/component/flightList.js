@@ -67,6 +67,7 @@ function FlightList() {
                     <p>Home &gt; Flight List</p>
                 </div>
                 <div className="formFild">
+                <div className="passanger">People [A({location.state.adult}),C({location.state.child}),I({location.state.infants})]</div>
                     <Form
                         label1='From'
                         label2='To'
@@ -99,7 +100,11 @@ function FlightList() {
                         </div>
                     </div>
                     <div className="below-right-part">
-                        <FlightScroll />
+                        <FlightScroll 
+                            a = {location.state.adult}
+                            c = {location.state.child}
+                            i = {location.state.infants}
+                        />
                     </div>
                 </div>
             </div>
