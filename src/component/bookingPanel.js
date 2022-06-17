@@ -37,7 +37,7 @@ function BookingPanel() {
                         </ul>
                         <div className="passenger">
                             <div className="drop-down-butten" onClick={(e) => setIsActive(!isActive)}>
-                                People({ adult + child + infants })
+                                People[ A({adult}), C({child}), I({infants})]
                                 { isActive ? <FontAwesomeIcon className="passenger-icon" icon={solid('angle-down')} /> : <FontAwesomeIcon className="passenger-icon" icon={solid('angle-up')} /> }
                             </div>
                             {isActive && (
@@ -88,7 +88,7 @@ function BookingPanel() {
                         </div>
                     </div>
                     <div className="outlet">
-                        {activeTab === 'tab1' ? <HotelBooking /> : activeTab === 'tab2' ? <FlightBooking /> : <CarBooking />}
+                        {activeTab === 'tab1' ? <HotelBooking a={adult} c={child} i={infants} /> : activeTab === 'tab2' ? <FlightBooking a={adult} c={child} i={infants} /> : <CarBooking a={adult} c={child} i={infants}/>}
                     </div>
                 </div>
             </div>

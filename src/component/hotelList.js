@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Navbar from './navbar';
-import './CSS/hotelList.css'
+import './CSS/hotelList.css';
 import './CSS/bookingPanel.css';
-import HotelScroll from "./hotelScrol";
+import HotelScroll from "./hotelScroll";
 import Form from './Form';
 
 
@@ -51,6 +49,7 @@ function HotelList() {
                     <p>Home &gt; Hotel list</p>
                 </div>
                 <div className="formFild">
+                    <div className="passanger">People [A({location.state.adult}),C({location.state.child}),I({location.state.infants}), ]</div>
                     <Form 
                         label1='Location'
                         label2='Check In'
@@ -83,11 +82,6 @@ function HotelList() {
                         </div>
                     </div>
                     <div className="below-right-part">
-                        <HotelScroll />
-                        <HotelScroll />
-                        <HotelScroll />
-                        <HotelScroll />
-                        <HotelScroll />
                         <HotelScroll />
                     </div>
                 </div>

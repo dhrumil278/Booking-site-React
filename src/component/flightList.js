@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
 import Navbar from "./navbar";
 import Form from './Form';
-import HotelScroll from "./hotelScrol";
+import HotelScroll from "./hotelScroll";
 import FlightScroll from './flightScroll';
 
 

@@ -16,6 +16,8 @@
 }
 .hotelImagDiv{
     border-radius: 15px;
+    flex-basis: 40%;
+    height: 400px;
 }
 .hotelDetails{
     flex-basis: 60%;
@@ -31,7 +33,6 @@
     margin-bottom: 0px;
     margin-left: 25px;
     color: rgb(109, 109, 109);
-
 }
 .facilty-and-price{
     display: flex;

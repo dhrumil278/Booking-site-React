@@ -10,7 +10,7 @@ const initialFormData = {
     checkOut: '',
 }
 
-function HotelBooking() {
+function HotelBooking(props) {
 
     const [formData, setFormData] = useState(initialFormData);
     const navigate = useNavigate();
@@ -27,6 +27,9 @@ function HotelBooking() {
                 place: formData.location,
                 checkIn: formData.checkIn,
                 checkOut: formData.checkOut,
+                adult:props.a,
+                child:props.c,
+                infants:props.i,
             }
         });
     }

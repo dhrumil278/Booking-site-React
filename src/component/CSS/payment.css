@@ -101,6 +101,21 @@
     margin-bottom: 0px;
 
 }
+.confirmAmount{
+    display: flex;
+    padding-left: 50px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.bookingImgDiv{
+    height: 200px;
+    /* border: 2px solid red; */
+    width:70%;
+    margin: auto;
+    border-radius: 13px;
+    box-shadow : rgba(0, 0, 0, 0.24) 0px 1px 4px;
+}
 .bookingDetails{
     display: flex;
     padding: 15px 15px;

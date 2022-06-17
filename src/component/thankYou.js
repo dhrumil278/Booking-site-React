@@ -2,7 +2,6 @@ import {useNavigate} from 'react-router';
 import Navbar from './navbar';
 import './CSS/thankyou.css';
 
-
 function Thankyou(){
 
     const navigate = useNavigate();
