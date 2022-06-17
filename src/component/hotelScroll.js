@@ -8,7 +8,7 @@ import HotelRajDarbar from '../Static/Images/OIP1.jpg';
 import HotelBagiyan from '../Static/Images/OIP2.jpg';
 import HotelSumeru from '../Static/Images/OIP4.jpg';
 
-function HotelScroll() {
+function HotelScroll(props) {
 
     const navigate = useNavigate();
 
@@ -60,6 +60,9 @@ function HotelScroll() {
             state:{
                 hotel:hotels,
                 value: index,
+                adult: props.a,
+                child: props.c,
+                infants: props.i,
             }}
         )
         // console.log('this is the value',index);

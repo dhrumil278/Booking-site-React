@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router';  
+import { useNavigate, useLocation } from 'react-router';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './CSS/payment.css';
@@ -18,51 +18,56 @@ function Payment() {
     const location = useLocation();
 
     const hindex = location.state.value;
-    console.log(location.state.hotel);
-    console.log(location.state.value);
-    // console.log(location.state.hotel[0].hname);
+    // console.log(location.state.car);
+
+    // const carname = location.state.car[hindex].carname;
+    // console.log(location.state.car[hindex].carname);
+    // console.log(location.state.car[hindex].carprice);
+    // console.log(location.state.car[hindex].carlocation);
+    // console.log(location.state.car[hindex].car);
+    // console.log(location.state.value);
 
     const [isActive, setIsActive] = useState(false);
 
     const mastercardStyle = {
-        background : `url(${Mastercard}) no-repeat center center/cover `,
+        background: `url(${Mastercard}) no-repeat center center/cover `,
         height: "50px",
         border: isActive ? "2px solid blue" : !isActive,
     }
     const paypalStyle = {
-        background : `url(${Paypal}) no-repeat center center/cover `,
+        background: `url(${Paypal}) no-repeat center center/cover `,
         height: "50px",
         border: isActive ? "2px solid blue" : !isActive,
     }
     const paytmStyle = {
-        background : `url(${Paytm}) no-repeat center center/cover `,
+        background: `url(${Paytm}) no-repeat center center/cover `,
         height: "50px",
         border: isActive ? "2px solid blue" : !isActive,
     }
     const gpayStyle = {
-        background : `url(${Gpay}) no-repeat center center/cover `,
+        background: `url(${Gpay}) no-repeat center center/cover `,
         height: "50px",
         border: isActive ? "2px solid blue" : !isActive,
 
     }
     const visaStyle = {
-        background : `url(${Visa}) no-repeat center center/cover `,
+        background: `url(${Visa}) no-repeat center center/cover `,
         height: "50px",
         border: isActive ? "2px solid blue" : !isActive,
     }
     const tajStyle = {
-        background : `url(${Taj}) no-repeat center center/cover `,
+        background: `url(${Taj}) no-repeat center center/cover `,
         height: "270px",
-        width:'70%',
+        width: '70%',
         margin: 'auto',
         borderRadius: '13px',
-        boxShadow : 'rgba(0, 0, 0, 0.16) 0px 1px 4px;',
+        boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px;',
     }
 
-    const handleClick= () => {
+    const handleClick = () => {
         setIsActive(current => !current);
     }
-    const handleConfirm=()=>{
+    const handleConfirm = () => {
         navigate('/thankyou');
     };
 
@@ -83,7 +88,7 @@ function Payment() {
                             <div className="infoForm">
                                 <div className="infoItems">
                                     <p className="infoLabel">Travellers</p>
-                                    <p className="infoInput">5 Persons</p>
+                                    <p className="infoInput">{/*location.state.adult + location.state.child + location.state.infants*/} People</p>
                                 </div>
                             </div>
                         </div>
@@ -101,11 +106,44 @@ function Payment() {
                     <div className="payment-leftPart">
                         <div className="bookingDiv">
                             <div className="bookingLocationDiv">
-                                <div className="bookingName">{location.state.hotel[hindex].hname}</div>
-                                <p className="bookingLocation"><FontAwesomeIcon className="flag-icon" icon={solid('flag')} />{location.state.hotel[hindex].hlocation}</p>
+                                <div className="bookingName">
+                                    {
+                                        location.state.hotel[hindex].hname ?
+                                            location.state.hotel[hindex].hname :
+                                                location.state.flight[hindex].company ?
+                                                    location.state.flight[hindex].company :
+                                                        location.state.car[hindex].carname 
+                                    }
+                                </div>
+                                <p className="bookingLocation"><FontAwesomeIcon className="flag-icon" icon={solid('flag')} />
+                                    {
+                                        location.state.hotel[hindex].hlocation ?
+                                            location.state.hotel[hindex].hlocation :
+                                                location.state.car[hindex].carlocation ?
+                                                    location.state.car[hindex].carlocation :
+                                                        " "
+                                    } 
+                                </p>
                             </div>
-                            <div className="bookingImgDiv" style={location.state.hotel[hindex].himage}></div>
-                            <div className="confirmAmount"><FontAwesomeIcon className="rupee-icon" icon={solid('indian-rupee-sign')} />{location.state.hotel[hindex].hprice}</div>
+                            <div className="bookingImgDiv" 
+                                style={
+                                    location.state.hotel[hindex].himage ?
+                                        location.state.hotel[hindex].himage :
+                                            location.state.car[hindex].carimage ?
+                                                location.state.car[hindex].carimage :
+                                                    " "
+                                } >
+                            </div>
+                            <div className="confirmAmount">
+                                <FontAwesomeIcon className="rupee-icon" icon={solid('indian-rupee-sign')} />
+                                    {
+                                        location.state.hotel[hindex].hprice ?
+                                            location.state.hotel[hindex].hprice :
+                                                location.state.flight[hindex].amount ?
+                                                    location.state.flight[hindex].amount :
+                                                        location.state.car[hindex].carprice
+                                    }
+                            </div>
                             <div className="bookingDetails">
                                 <div className="bookingItems">
                                     <p className="bookingLabel">Check In</p>

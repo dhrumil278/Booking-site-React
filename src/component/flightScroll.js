@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './CSS/flightScroll.css';
+import { useNavigate } from "react-router-dom";
 
 function FlightScroll() {
+
+    const navigate = useNavigate();
 
     const flights = [
         {
@@ -47,28 +50,37 @@ function FlightScroll() {
         },
     ];
 
+    const handleSubmit=(index)=>{
+        navigate('/payment',{
+            state:{
+                flight:flights,
+                value:index,
+            }
+        })
+    }
+
 
     return (
         <>
             {
-                flights.map((flight) => (
+                flights.map((flight,index) => (
                     <div className="mainFlightScroll">
-                        <div className="flightTitle">{flight.company}</div>
+                        <div key={index} className="flightTitle">{flight.company}</div>
                         <div className="mainTravelDiv">
                             <div className="From">
-                                <div className="cityName">{flight.from}</div>
-                                <div className="pickupTime">{flight.pickup}</div>
+                                <div key={index} className="cityName">{flight.from}</div>
+                                <div key={index} className="pickupTime">{flight.pickup}</div>
                             </div>
                             <div className="flightDuretion">
-                                <div className="timeDuration">{flight.duretion}</div>
-                                <div className="duretion">Duretion</div>
+                                <div key={index} className="timeDuration">{flight.duretion}</div>
+                                <div key={index} className="duretion">Duretion</div>
                             </div>
                             <div className="To">
-                                <div className="cityName">{flight.to}</div>
-                                <div className="pickupTime">{flight.drop}</div>
+                                <div key={index} className="cityName">{flight.to}</div>
+                                <div key={index} className="pickupTime">{flight.drop}</div>
                             </div>
-                            <div className="flightPrice"><FontAwesomeIcon className="rupee-icon" icon={solid('indian-rupee-sign')} />{flight.amount}</div>
-                            <div className="bookNowFlight">Book Now</div>
+                            <div key={index} className="flightPrice"><FontAwesomeIcon className="rupee-icon" icon={solid('indian-rupee-sign')} />{flight.amount}</div>
+                            <div className="bookNowFlight" onClick={()=>handleSubmit(index)}>Book Now</div>
                         </div>
                     </div>
                 ))

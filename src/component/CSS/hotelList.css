@@ -20,6 +20,11 @@
 .mainHotelListPage{
     background-color: #e1e1e12a;
 }
+.passanger{
+    font-size: 15px;
+    color: #7c797b;
+    margin: 5px 12px; 
+}
 .formFild{
     width: 80%;
     margin: auto;

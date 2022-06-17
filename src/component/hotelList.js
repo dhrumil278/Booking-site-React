@@ -49,7 +49,7 @@ function HotelList() {
                     <p>Home &gt; Hotel list</p>
                 </div>
                 <div className="formFild">
-                    <div className="passanger">People [A({location.state.adult}),C({location.state.child}),I({location.state.infants}), ]</div>
+                    <div className="passanger">People [A({location.state.adult}),C({location.state.child}),I({location.state.infants})]</div>
                     <Form 
                         label1='Location'
                         label2='Check In'
@@ -82,7 +82,7 @@ function HotelList() {
                         </div>
                     </div>
                     <div className="below-right-part">
-                        <HotelScroll />
+                        <HotelScroll a={location.state.adult} c={location.state.child} i={location.state.infants}/>
                     </div>
                 </div>
             </div>
